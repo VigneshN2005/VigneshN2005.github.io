@@ -1,4 +1,3 @@
-// 3D point-cloud globe drawn on a 2D canvas: rotating sphere, orbit rings, mouse parallax.
 (function () {
   const c = document.getElementById('globe');
   if (!c) return;
@@ -40,24 +39,21 @@
     rotX = -0.25 + my * 0.5;
     g.clearRect(0, 0, W, H);
 
-    // halo
     const halo = g.createRadialGradient(W / 2, H / 2, R * 0.2, W / 2, H / 2, R * 1.5);
     halo.addColorStop(0, 'rgba(125,249,201,0.07)'); halo.addColorStop(1, 'rgba(8,9,13,0)');
     g.fillStyle = halo; g.beginPath(); g.arc(W / 2, H / 2, R * 1.5, 0, 7); g.fill();
 
-    // points
     for (const p of pts) {
       const [x, y, z, s] = project(p[0], p[1], p[2]);
-      const front = (1 - z) / 2;            // 0 back .. 1 front
+      const front = (1 - z) / 2;
       const a = 0.08 + front * 0.75;
-      const mix = (p[1] + 1) / 2;           // mint at top -> violet at bottom
+      const mix = (p[1] + 1) / 2;
       const r = Math.round(125 + (139 - 125) * mix), gg = Math.round(249 + (124 - 249) * mix), b = Math.round(201 + (255 - 201) * mix);
       g.fillStyle = `rgba(${r},${gg},${b},${a})`;
       const sz = (0.6 + front * 1.4) * s;
       g.fillRect(x - sz / 2, y - sz / 2, sz, sz);
     }
 
-    // orbit rings + satellites
     rings.forEach((rg, k) => {
       g.beginPath();
       for (let i = 0; i <= 120; i++) {

@@ -5,7 +5,6 @@
   const fine = matchMedia('(hover: hover) and (pointer: fine)').matches;
   document.body.classList.add('loading');
 
-  /* ---------- preloader ---------- */
   const count = $('#loaderCount'), bar = $('#loaderBar');
   let n = 0;
   const imgs = $$('img').filter(i => i.loading !== 'lazy');
@@ -28,7 +27,6 @@
     }, reduce ? 0 : 250);
   }
 
-  /* ---------- split headings into words ---------- */
   $$('[data-split]').forEach(el => {
     let i = 0;
     const walk = node => {
@@ -53,7 +51,6 @@
     walk(el);
   });
 
-  /* ---------- reveal on scroll ---------- */
   const io = new IntersectionObserver(entries => {
     entries.forEach(e => {
       if (!e.isIntersecting) return;
@@ -64,7 +61,6 @@
     });
   }, { threshold: 0.18, rootMargin: '0px 0px -8% 0px' });
   $$('[data-reveal],[data-split]').forEach(el => io.observe(el));
-  // stagger siblings in grids
   $$('.stats,.skills,.extras').forEach(g => [...g.children].forEach((c, i) => c.style.setProperty('--rd', i * 0.08 + 's')));
 
   function countUp(el) {
@@ -79,7 +75,6 @@
     requestAnimationFrame(step);
   }
 
-  /* ---------- rotating words ---------- */
   const rot = $$('#rotator span');
   let ri = 0;
   if (rot.length) {
@@ -91,7 +86,6 @@
     }, 2200);
   }
 
-  /* ---------- nav: progress, hide on scroll, active link ---------- */
   const nav = $('#nav'), prog = $('#progress');
   let lastY = 0;
   addEventListener('scroll', () => {
@@ -108,7 +102,6 @@
   $('#burger').addEventListener('click', () => nav.classList.toggle('open'));
   $$('#navLinks a').forEach(a => a.addEventListener('click', () => nav.classList.remove('open')));
 
-  /* ---------- cursor ---------- */
   if (fine && !reduce) {
     document.body.classList.add('has-cursor');
     const dot = $('#cursor'), ring = $('#cursorRing');
@@ -121,7 +114,6 @@
     });
   }
 
-  /* ---------- magnetic buttons ---------- */
   if (fine && !reduce) $$('.magnetic').forEach(el => {
     el.addEventListener('pointermove', e => {
       const b = el.getBoundingClientRect();
@@ -130,7 +122,6 @@
     el.addEventListener('pointerleave', () => { el.style.transform = ''; });
   });
 
-  /* ---------- tilt cards + spotlight ---------- */
   if (fine && !reduce) $$('.tilt').forEach(el => {
     el.style.transition = 'transform .6s cubic-bezier(.22,1,.36,1), border-color .5s, box-shadow .5s';
     el.addEventListener('pointermove', e => {
@@ -141,7 +132,6 @@
     el.addEventListener('pointerleave', () => { el.style.transform = ''; });
   });
 
-  /* ---------- sliders ---------- */
   $$('[data-slider]').forEach(sl => {
     const track = $('.slider__track', sl), slides = $$('.slide', sl), dots = $('.slider__dots', sl), vp = $('.slider__viewport', sl);
     let i = 0, timer, startX = null, dx = 0;
@@ -179,7 +169,6 @@
     new IntersectionObserver(([e]) => (e.isIntersecting ? auto() : clearInterval(timer))).observe(sl);
   });
 
-  /* ---------- lightbox ---------- */
   const lb = $('#lightbox');
   function openLightbox(src, cap) {
     $('img', lb).src = src; $('p', lb).textContent = cap || '';
@@ -189,13 +178,11 @@
   lb.addEventListener('click', e => { if (e.target === lb || e.target.closest('.lightbox__close')) closeLb(); });
   addEventListener('keydown', e => e.key === 'Escape' && closeLb());
 
-  /* ---------- parallax on hero ---------- */
   const globe = $('#globe');
   addEventListener('scroll', () => {
     if (scrollY < innerHeight * 1.2) globe.style.transform = `translateY(calc(-50% + ${scrollY * 0.25}px))`;
   }, { passive: true });
 
-  /* ---------- IST clock ---------- */
   const clock = $('#clock');
   const setClock = () => { clock.textContent = new Date().toLocaleTimeString('en-IN', { timeZone: 'Asia/Kolkata', hour: '2-digit', minute: '2-digit', hour12: false }); };
   setClock(); setInterval(setClock, 20000);

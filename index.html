@@ -14,7 +14,6 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <!-- preloader -->
   <div class="loader" id="loader" aria-hidden="true">
     <div class="loader__inner">
       <span class="loader__name">Vignesh N</span>
@@ -42,7 +41,6 @@
   </header>
 
   <main id="top">
-    <!-- HERO -->
     <section class="hero">
       <canvas id="globe" class="hero__globe" aria-hidden="true"></canvas>
       <div class="hero__glow" aria-hidden="true"></div>
@@ -77,7 +75,6 @@
       <a href="#about" class="hero__scroll" aria-label="Scroll down"><span></span></a>
     </section>
 
-    <!-- MARQUEE -->
     <div class="marquee" aria-hidden="true">
       <div class="marquee__track">
         <span>LLM Agents</span><i>✦</i><span>Tool Calling</span><i>✦</i><span>RAG &amp; Embeddings</span><i>✦</i><span>FastAPI</span><i>✦</i><span>PostgreSQL</span><i>✦</i><span>Docker</span><i>✦</i><span>GitHub Actions</span><i>✦</i><span>Next.js</span><i>✦</i><span>PyTorch</span><i>✦</i>
@@ -85,7 +82,6 @@
       </div>
     </div>
 
-    <!-- ABOUT -->
     <section class="section" id="about">
       <div class="container">
         <p class="section__label" data-reveal><span>01</span> About</p>
@@ -107,7 +103,6 @@
       </div>
     </section>
 
-    <!-- EXPERIENCE -->
     <section class="section" id="experience">
       <div class="container">
         <p class="section__label" data-reveal><span>02</span> Experience</p>
@@ -153,57 +148,48 @@
       </div>
     </section>
 
-    <!-- PROJECTS -->
     <section class="section" id="projects">
       <div class="container">
         <p class="section__label" data-reveal><span>03</span> Projects</p>
         <h2 class="section__title" data-split>Things I've <em class="serif">built</em>.</h2>
 
-        <!-- Job search agent -->
         <article class="case case--flip" data-reveal>
           <div class="case__media">
-            <div class="arch" aria-label="Architecture of the job-search agent">
-              <div class="arch__head"><span class="tag tag--wip"><i></i>In progress</span><span class="mono">architecture</span></div>
-              <svg viewBox="0 0 560 360" class="arch__svg" role="img">
-                <defs>
-                  <linearGradient id="ag" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="560" y2="0"><stop offset="0" stop-color="#7df9c9"/><stop offset="1" stop-color="#8b7cff"/></linearGradient>
-                </defs>
-                <g class="arch__lines" fill="none" stroke="url(#ag)" stroke-width="1.6">
-                  <path d="M120 70 H230"/><path d="M330 70 H440"/>
-                  <path d="M280 98 V150"/>
-                  <path d="M280 205 C280 240 130 230 130 270"/><path d="M280 205 V270"/><path d="M280 205 C280 240 430 230 430 270"/>
-                  <path d="M430 98 V120 C430 135 410 140 400 150"/>
-                </g>
-                <g class="arch__nodes">
-                  <g transform="translate(20 42)"><rect width="100" height="56" rx="12"/><text x="50" y="25">User</text><text x="50" y="41" class="s">chat message</text></g>
-                  <g transform="translate(230 42)"><rect width="100" height="56" rx="12" class="hl"/><text x="50" y="25">LLM agent</text><text x="50" y="41" class="s">Groq · memory</text></g>
-                  <g transform="translate(440 42)"><rect width="100" height="56" rx="12"/><text x="50" y="25">JSON reply</text><text x="50" y="41" class="s">Pydantic-checked</text></g>
-                  <g transform="translate(200 150)"><rect width="160" height="55" rx="12"/><text x="80" y="24">Tool calls</text><text x="80" y="40" class="s">search · filter · save_pref</text></g>
-                  <g transform="translate(60 270)"><rect width="140" height="56" rx="12"/><text x="70" y="25">pgvector</text><text x="70" y="41" class="s">semantic search</text></g>
-                  <g transform="translate(220 270)"><rect width="120" height="56" rx="12"/><text x="60" y="25">SQL filters</text><text x="60" y="41" class="s">location · role · pay</text></g>
-                  <g transform="translate(360 270)"><rect width="140" height="56" rx="12"/><text x="70" y="25">Re-ranking</text><text x="70" y="41" class="s">personalised</text></g>
-                </g>
-              </svg>
-              <p class="arch__foot mono">eval set scores match quality · deployed through my CI/CD pipeline</p>
+            <div class="slider" data-slider>
+              <div class="slider__chrome"><i></i><i></i><i></i><span>job-search-agent-teal-tau.vercel.app</span></div>
+              <div class="slider__viewport">
+                <div class="slider__track">
+                  <figure class="slide"><img src="./scout-1.webp" alt="Scout recommending backend jobs in Berlin with match scores" loading="lazy"><figcaption>Plain-words request in, ranked real postings out, each with a reason it fits</figcaption></figure>
+                  <figure class="slide"><img src="./scout-2.webp" alt="Tool calls the agent made for one answer" loading="lazy"><figcaption>"How I found these": the tool calls behind an answer, and the preferences it remembered</figcaption></figure>
+                  <figure class="slide"><img src="./scout-3.webp" alt="Scout landing screen with job index stats" loading="lazy"><figcaption>671 real tech postings indexed with embeddings, refreshed every day</figcaption></figure>
+                  <figure class="slide slide--contain"><img src="./scout-4.webp" alt="GitHub Actions run with lint, test, security, docker and deploy passing" loading="lazy"><figcaption>Every push: lint, tests, security scans, Docker build + Trivy scan, deploy and health check</figcaption></figure>
+                </div>
+              </div>
+              <div class="slider__ui">
+                <button class="slider__btn" data-prev aria-label="Previous">←</button>
+                <div class="slider__dots"></div>
+                <button class="slider__btn" data-next aria-label="Next">→</button>
+              </div>
             </div>
           </div>
           <div class="case__info">
-            <div class="case__top"><span class="tag tag--wip"><i></i>In progress</span><span class="case__date">2026</span></div>
+            <div class="case__top"><span class="tag tag--live"><i></i>Live</span><span class="case__date">2026</span></div>
             <h3 class="case__title">Conversational Job-Search Agent</h3>
-            <p class="case__desc">A chat agent that helps someone find jobs by describing what they want in plain words, instead of fighting filters.</p>
+            <p class="case__desc">Scout is a chat agent that finds real jobs from a plain-words description, remembers what you told it, and only recommends postings it actually found.</p>
             <ul class="case__list">
-              <li>Calls tools (<code>search_jobs</code>, <code>filter_jobs</code>, <code>save_preference</code>) and remembers the conversation.</li>
-              <li>Jobs live in PostgreSQL with pgvector embeddings; search mixes vector similarity with SQL filters, then re-ranks into personalised recommendations.</li>
-              <li>The LLM's JSON is validated with Pydantic, and a small eval set flags made-up or broken answers.</li>
+              <li>The LLM calls tools (<code>search_jobs</code>, <code>filter_jobs</code>, <code>save_preference</code>) and keeps session memory in PostgreSQL.</li>
+              <li>670+ real tech postings, refreshed daily, stored with pgvector embeddings. Search mixes vector similarity with SQL filters, then re-ranks by keywords, saved preferences and freshness.</li>
+              <li>Answers are JSON validated with Pydantic, and any pick a tool didn't return is dropped. On a 20-case eval, every completed case passed with 0 made-up jobs.</li>
+              <li>Shipped through its own CI/CD: lint, 53 tests, Gitleaks and pip-audit, Docker build with Trivy scan, then deploy to Vercel and a health check.</li>
             </ul>
-            <div class="chips"><span>Python</span><span>FastAPI</span><span>PostgreSQL + pgvector</span><span>Groq</span><span>Docker</span></div>
+            <div class="chips"><span>Python</span><span>FastAPI</span><span>PostgreSQL + pgvector</span><span>Groq</span><span>Gemini embeddings</span><span>Docker</span><span>GitHub Actions</span><span>Vercel</span></div>
             <div class="case__links">
               <a href="https://github.com/VigneshN2005/job-search-agent" target="_blank" rel="noopener" class="btn btn--ghost btn--sm magnetic">GitHub ↗</a>
+              <a href="https://job-search-agent-teal-tau.vercel.app" target="_blank" rel="noopener" class="btn btn--primary btn--sm magnetic">Live app ↗</a>
             </div>
           </div>
         </article>
 
-        <!-- CI/CD -->
         <article class="case" data-reveal>
           <div class="case__media">
             <div class="slider" data-slider>
@@ -239,7 +225,6 @@
           </div>
         </article>
 
-        <!-- ARIA -->
         <article class="case case--flip" data-reveal>
           <div class="case__media">
             <div class="slider" data-slider>
@@ -274,7 +259,6 @@
       </div>
     </section>
 
-    <!-- SKILLS -->
     <section class="section" id="skills">
       <div class="container">
         <p class="section__label" data-reveal><span>04</span> Skills</p>
@@ -312,7 +296,6 @@
       </div>
     </section>
 
-    <!-- CONTACT -->
     <section class="section contact" id="contact">
       <div class="container">
         <p class="section__label" data-reveal><span>05</span> Contact</p>
@@ -335,7 +318,6 @@
     </div>
   </footer>
 
-  <!-- lightbox -->
   <div class="lightbox" id="lightbox" aria-hidden="true">
     <button class="lightbox__close" aria-label="Close">×</button>
     <img alt="">
