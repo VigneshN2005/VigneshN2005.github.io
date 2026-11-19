@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Vignesh N · AI & Software Engineer</title>
+  <meta name="description" content="Vignesh N, final-year AI & ML student in Bengaluru. LLM agents, Python backends, CI/CD and full-stack projects.">
+  <meta name="theme-color" content="#08090d">
+  <meta property="og:title" content="Vignesh N · AI & Software Engineer">
+  <meta property="og:description" content="LLM agents, Python backends, CI/CD and full-stack projects.">
+  <meta property="og:image" content="./transpeed-1.webp">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preload" href="./display-700.woff" as="font" type="font/woff" crossorigin>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- preloader -->
+  <div class="loader" id="loader" aria-hidden="true">
+    <div class="loader__inner">
+      <span class="loader__name">Vignesh N</span>
+      <span class="loader__count" id="loaderCount">00</span>
+    </div>
+    <div class="loader__bar"><span id="loaderBar"></span></div>
+  </div>
+
+  <div class="progress" id="progress"></div>
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-ring" id="cursorRing"></div>
+  <div class="grain" aria-hidden="true"></div>
+
+  <header class="nav" id="nav">
+    <a href="#top" class="nav__logo" aria-label="Home"><span>VN</span></a>
+    <nav class="nav__links" id="navLinks">
+      <a href="#about" data-nav>About</a>
+      <a href="#experience" data-nav>Experience</a>
+      <a href="#projects" data-nav>Projects</a>
+      <a href="#skills" data-nav>Skills</a>
+      <a href="#contact" data-nav>Contact</a>
+    </nav>
+    <a href="Vignesh_N_Resume.pdf" class="btn btn--ghost btn--sm nav__cta magnetic" target="_blank" rel="noopener">Resume ↗</a>
+    <button class="nav__burger" id="burger" aria-label="Menu"><span></span><span></span></button>
+  </header>
+
+  <main id="top">
+    <!-- HERO -->
+    <section class="hero">
+      <canvas id="globe" class="hero__globe" aria-hidden="true"></canvas>
+      <div class="hero__glow" aria-hidden="true"></div>
+      <div class="container hero__grid">
+        <div class="hero__copy">
+          <p class="eyebrow hero__in" style="--d:0"><span class="dot"></span> Open to SDE / AI engineering internships</p>
+          <h1 class="hero__title">
+            <span class="line"><span class="hero__in" style="--d:1">Vignesh N</span></span>
+            <span class="line"><em class="serif hero__in" style="--d:2">builds AI systems</em></span>
+            <span class="line"><span class="hero__in grad" style="--d:3">that actually ship.</span></span>
+          </h1>
+          <p class="hero__sub hero__in" style="--d:4">
+            Final-year AI &amp; ML student in Bengaluru. I take projects from an empty folder to production:
+            <span class="rotator" id="rotator"><span>LLM agents</span><span>Python backends</span><span>CI/CD pipelines</span><span>client websites</span><span>satellite ML</span></span>
+          </p>
+          <div class="hero__actions hero__in" style="--d:5">
+            <a href="#projects" class="btn btn--primary magnetic">View my work <span class="arrow">→</span></a>
+            <a href="https://github.com/VigneshN2005" class="btn btn--ghost magnetic" target="_blank" rel="noopener">GitHub ↗</a>
+          </div>
+        </div>
+        <div class="hero__card hero__in tilt" style="--d:3">
+          <div class="hero__photo">
+            <img src="./me.webp" alt="Vignesh N" width="640" height="640">
+          </div>
+          <div class="hero__meta">
+            <div><span class="label">Based in</span>Bengaluru, India</div>
+            <div><span class="label">Studying</span>B.E. AI &amp; ML, GAT</div>
+            <div><span class="label">Status</span><span class="live"><i></i>Available</span></div>
+          </div>
+        </div>
+      </div>
+      <a href="#about" class="hero__scroll" aria-label="Scroll down"><span></span></a>
+    </section>
+
+    <!-- MARQUEE -->
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee__track">
+        <span>LLM Agents</span><i>✦</i><span>Tool Calling</span><i>✦</i><span>RAG &amp; Embeddings</span><i>✦</i><span>FastAPI</span><i>✦</i><span>PostgreSQL</span><i>✦</i><span>Docker</span><i>✦</i><span>GitHub Actions</span><i>✦</i><span>Next.js</span><i>✦</i><span>PyTorch</span><i>✦</i>
+        <span>LLM Agents</span><i>✦</i><span>Tool Calling</span><i>✦</i><span>RAG &amp; Embeddings</span><i>✦</i><span>FastAPI</span><i>✦</i><span>PostgreSQL</span><i>✦</i><span>Docker</span><i>✦</i><span>GitHub Actions</span><i>✦</i><span>Next.js</span><i>✦</i><span>PyTorch</span><i>✦</i>
+      </div>
+    </div>
+
+    <!-- ABOUT -->
+    <section class="section" id="about">
+      <div class="container">
+        <p class="section__label" data-reveal><span>01</span> About</p>
+        <div class="about">
+          <h2 class="about__lead" data-split>
+            I like the whole journey of a project: the database, the Python backend, the pipeline that ships it, and the <em class="serif">LLM features</em> on top.
+          </h2>
+          <div class="about__body" data-reveal>
+            <p>I'm a final-year B.E. Artificial Intelligence &amp; Machine Learning student at Global Academy of Technology, Bengaluru. I've been working with LLMs for years: writing prompts, wiring up tool calls, and testing where they break.</p>
+            <p>Recently I built and delivered a website for a real logistics client, set up a config-driven DevSecOps pipeline that deploys with automatic rollback, and built most of a satellite-imagery system that tracks land encroachment over 30 years.</p>
+          </div>
+        </div>
+        <div class="stats">
+          <div class="stat" data-reveal><b data-count="8.91" data-dec="2">0</b><span>CGPA, up to 7th semester</span></div>
+          <div class="stat" data-reveal><b data-count="7">0</b><span>stages in my CI/CD pipeline</span></div>
+          <div class="stat" data-reveal><b data-count="30" data-suffix="+">0</b><span>years of satellite imagery analysed</span></div>
+          <div class="stat" data-reveal><b data-count="1">0</b><span>live website for a real client</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- EXPERIENCE -->
+    <section class="section" id="experience">
+      <div class="container">
+        <p class="section__label" data-reveal><span>02</span> Experience</p>
+        <h2 class="section__title" data-split>Work for a <em class="serif">real</em> client.</h2>
+
+        <article class="case" data-reveal>
+          <div class="case__media">
+            <div class="slider" data-slider>
+              <div class="slider__chrome"><i></i><i></i><i></i><span>transpeed-phi.vercel.app</span></div>
+              <div class="slider__viewport">
+                <div class="slider__track">
+                  <figure class="slide"><img src="./transpeed-1.webp" alt="Transpeed Logistics homepage" loading="lazy"><figcaption>Homepage: animated hero with air, sea and road freight</figcaption></figure>
+                  <figure class="slide"><img src="./transpeed-2.webp" alt="Transpeed services grid" loading="lazy"><figcaption>All six services, each with its own page</figcaption></figure>
+                  <figure class="slide"><img src="./transpeed-3.webp" alt="Transpeed FAQ chatbot answering a question" loading="lazy"><figcaption>The FAQ chatbot answering a misspelt question ("clearence")</figcaption></figure>
+                </div>
+              </div>
+              <div class="slider__ui">
+                <button class="slider__btn" data-prev aria-label="Previous">←</button>
+                <div class="slider__dots"></div>
+                <button class="slider__btn" data-next aria-label="Next">→</button>
+              </div>
+            </div>
+          </div>
+          <div class="case__info">
+            <div class="case__top">
+              <span class="tag tag--live"><i></i>Live</span>
+              <span class="case__date">Sep – Oct 2026</span>
+            </div>
+            <h3 class="case__title">Web Developer · Transpeed Logistics</h3>
+            <p class="case__desc">Client project for an AEO-certified freight and customs company. I gathered requirements over several review rounds with their team and delivered the full site, which is now being deployed on the company's own server.</p>
+            <ul class="case__list">
+              <li>Designed the PostgreSQL tables behind a staff admin dashboard (announcements, chatbot FAQs, enquiries), locked down with Supabase auth and row-level security.</li>
+              <li>Wrote the FAQ chatbot: it finds the closest matching question in a staff-editable knowledge base, suggests alternatives when unsure, and emails staff when it has no answer.</li>
+              <li>Built a validated quote-enquiry API with spam protection.</li>
+            </ul>
+            <div class="chips"><span>Next.js</span><span>TypeScript</span><span>Supabase</span><span>PostgreSQL</span><span>Row-level security</span></div>
+            <div class="case__links">
+              <a href="https://transpeed-phi.vercel.app/" target="_blank" rel="noopener" class="btn btn--primary btn--sm magnetic">Visit site ↗</a>
+              <span class="note">Code is private (client's property)</span>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section class="section" id="projects">
+      <div class="container">
+        <p class="section__label" data-reveal><span>03</span> Projects</p>
+        <h2 class="section__title" data-split>Things I've <em class="serif">built</em>.</h2>
+
+        <!-- Job search agent -->
+        <article class="case case--flip" data-reveal>
+          <div class="case__media">
+            <div class="arch" aria-label="Architecture of the job-search agent">
+              <div class="arch__head"><span class="tag tag--wip"><i></i>In progress</span><span class="mono">architecture</span></div>
+              <svg viewBox="0 0 560 360" class="arch__svg" role="img">
+                <defs>
+                  <linearGradient id="ag" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="560" y2="0"><stop offset="0" stop-color="#7df9c9"/><stop offset="1" stop-color="#8b7cff"/></linearGradient>
+                </defs>
+                <g class="arch__lines" fill="none" stroke="url(#ag)" stroke-width="1.6">
+                  <path d="M120 70 H230"/><path d="M330 70 H440"/>
+                  <path d="M280 98 V150"/>
+                  <path d="M280 205 C280 240 130 230 130 270"/><path d="M280 205 V270"/><path d="M280 205 C280 240 430 230 430 270"/>
+                  <path d="M430 98 V120 C430 135 410 140 400 150"/>
+                </g>
+                <g class="arch__nodes">
+                  <g transform="translate(20 42)"><rect width="100" height="56" rx="12"/><text x="50" y="25">User</text><text x="50" y="41" class="s">chat message</text></g>
+                  <g transform="translate(230 42)"><rect width="100" height="56" rx="12" class="hl"/><text x="50" y="25">LLM agent</text><text x="50" y="41" class="s">Groq · memory</text></g>
+                  <g transform="translate(440 42)"><rect width="100" height="56" rx="12"/><text x="50" y="25">JSON reply</text><text x="50" y="41" class="s">Pydantic-checked</text></g>
+                  <g transform="translate(200 150)"><rect width="160" height="55" rx="12"/><text x="80" y="24">Tool calls</text><text x="80" y="40" class="s">search · filter · save_pref</text></g>
+                  <g transform="translate(60 270)"><rect width="140" height="56" rx="12"/><text x="70" y="25">pgvector</text><text x="70" y="41" class="s">semantic search</text></g>
+                  <g transform="translate(220 270)"><rect width="120" height="56" rx="12"/><text x="60" y="25">SQL filters</text><text x="60" y="41" class="s">location · role · pay</text></g>
+                  <g transform="translate(360 270)"><rect width="140" height="56" rx="12"/><text x="70" y="25">Re-ranking</text><text x="70" y="41" class="s">personalised</text></g>
+                </g>
+              </svg>
+              <p class="arch__foot mono">eval set scores match quality · deployed through my CI/CD pipeline</p>
+            </div>
+          </div>
+          <div class="case__info">
+            <div class="case__top"><span class="tag tag--wip"><i></i>In progress</span><span class="case__date">2026</span></div>
+            <h3 class="case__title">Conversational Job-Search Agent</h3>
+            <p class="case__desc">A chat agent that helps someone find jobs by describing what they want in plain words, instead of fighting filters.</p>
+            <ul class="case__list">
+              <li>Calls tools (<code>search_jobs</code>, <code>filter_jobs</code>, <code>save_preference</code>) and remembers the conversation.</li>
+              <li>Jobs live in PostgreSQL with pgvector embeddings; search mixes vector similarity with SQL filters, then re-ranks into personalised recommendations.</li>
+              <li>The LLM's JSON is validated with Pydantic, and a small eval set flags made-up or broken answers.</li>
+            </ul>
+            <div class="chips"><span>Python</span><span>FastAPI</span><span>PostgreSQL + pgvector</span><span>Groq</span><span>Docker</span></div>
+            <div class="case__links">
+              <a href="https://github.com/VigneshN2005/job-search-agent" target="_blank" rel="noopener" class="btn btn--ghost btn--sm magnetic">GitHub ↗</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- CI/CD -->
+        <article class="case" data-reveal>
+          <div class="case__media">
+            <div class="slider" data-slider>
+              <div class="slider__chrome"><i></i><i></i><i></i><span>github.com/VigneshN2005/my-cicd-framework</span></div>
+              <div class="slider__viewport">
+                <div class="slider__track">
+                  <figure class="slide slide--contain"><img src="./cicd-1.webp" alt="GitHub Actions run with every stage passing" loading="lazy"><figcaption>A full run: config → lint + security → tests → Docker → deploy, all green in 4m 29s</figcaption></figure>
+                  <figure class="slide slide--contain"><img src="./cicd-2.webp" alt="LLM code review comment on a pull request" loading="lazy"><figcaption>The pipeline's LLM reviewer commenting on a pull request</figcaption></figure>
+                  <figure class="slide"><img src="./cicd-3.webp" alt="Deployed React and FastAPI demo app" loading="lazy"><figcaption>The React + FastAPI app it deploys, released blue-green on Vercel</figcaption></figure>
+                </div>
+              </div>
+              <div class="slider__ui">
+                <button class="slider__btn" data-prev aria-label="Previous">←</button>
+                <div class="slider__dots"></div>
+                <button class="slider__btn" data-next aria-label="Next">→</button>
+              </div>
+            </div>
+          </div>
+          <div class="case__info">
+            <div class="case__top"><span class="tag tag--live"><i></i>Running</span><span class="case__date">2026</span></div>
+            <h3 class="case__title">DevSecOps CI/CD Framework</h3>
+            <p class="case__desc">A GitHub Actions pipeline where one YAML file decides what runs. Nothing gets published or deployed unless every earlier stage passes.</p>
+            <ul class="case__list">
+              <li>Lint, tests with coverage gates (80% Python / 70% JS), and security scans: Gitleaks, pip-audit, npm audit and Trivy.</li>
+              <li>Blue-green release on Vercel: the new build stays hidden until its health check passes, then rolls back automatically if anything fails.</li>
+              <li>An LLM code reviewer for pull requests (Groq, with Gemini as backup) that switches models when one is retired.</li>
+            </ul>
+            <div class="chips"><span>GitHub Actions</span><span>Docker</span><span>FastAPI</span><span>React</span><span>Vercel</span><span>Trivy</span></div>
+            <div class="case__links">
+              <a href="https://github.com/VigneshN2005/my-cicd-framework" target="_blank" rel="noopener" class="btn btn--ghost btn--sm magnetic">GitHub ↗</a>
+              <a href="https://my-cicd-framework.vercel.app" target="_blank" rel="noopener" class="btn btn--primary btn--sm magnetic">Live app ↗</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- ARIA -->
+        <article class="case case--flip" data-reveal>
+          <div class="case__media">
+            <div class="slider" data-slider>
+              <div class="slider__chrome"><i></i><i></i><i></i><span>ARIA · desktop app</span></div>
+              <div class="slider__viewport">
+                <div class="slider__track">
+                  <figure class="slide"><img src="./aria-1.webp" alt="ARIA overview dashboard" loading="lazy"><figcaption>Overview: validated encroachment across the Arkavathi watershed, 1995 → 2026</figcaption></figure>
+                  <figure class="slide"><img src="./aria-2.webp" alt="ARIA manual verification screen" loading="lazy"><figcaption>Manual verification of 233 change clusters against 32 years of imagery</figcaption></figure>
+                  <figure class="slide slide--contain"><img src="./aria-3.webp" alt="One cluster traced year by year" loading="lazy"><figcaption>One site traced year by year, from water body to built-up land</figcaption></figure>
+                  <figure class="slide slide--contain"><img src="./aria-4.webp" alt="Grad-CAM and validation against government map" loading="lazy"><figcaption>Grad-CAM attention (top) and prediction vs government land-use map (bottom)</figcaption></figure>
+                </div>
+              </div>
+              <div class="slider__ui">
+                <button class="slider__btn" data-prev aria-label="Previous">←</button>
+                <div class="slider__dots"></div>
+                <button class="slider__btn" data-next aria-label="Next">→</button>
+              </div>
+            </div>
+          </div>
+          <div class="case__info">
+            <div class="case__top"><span class="tag">Final-year project</span><span class="case__date">2026</span></div>
+            <h3 class="case__title">ARIA · River Encroachment Analyst</h3>
+            <p class="case__desc">Detects illegal encroachment on rivers, forests and wetlands around Bengaluru, using 30 years of Landsat and Sentinel imagery over about 4,000 sq km.</p>
+            <ul class="case__list">
+              <li>Built most of the system for our 3-member team: data pipeline, U-Net + XGBoost training, FastAPI backend and offline Electron desktop app.</li>
+              <li>Every claim is checked against government land-use maps or a spectral recheck, not the model's own output.</li>
+              <li>Grad-CAM and SHAP show why an area was flagged, and a local LLM (Ollama) answers questions about the results.</li>
+            </ul>
+            <div class="chips"><span>PyTorch U-Net</span><span>XGBoost</span><span>FastAPI</span><span>Electron</span><span>Ollama</span></div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section class="section" id="skills">
+      <div class="container">
+        <p class="section__label" data-reveal><span>04</span> Skills</p>
+        <h2 class="section__title" data-split>What I <em class="serif">work</em> with.</h2>
+        <div class="skills">
+          <div class="skill tilt" data-reveal><span class="skill__icon">◆</span><h4>LLMs &amp; Agents</h4><p>Prompt engineering, tool / function calling, structured JSON outputs, agents with memory, LLM evaluation, Groq · Gemini · Ollama</p></div>
+          <div class="skill tilt" data-reveal><span class="skill__icon">◎</span><h4>Search &amp; Retrieval</h4><p>Embeddings, semantic search, RAG, retrieval and ranking, fuzzy similarity matching</p></div>
+          <div class="skill tilt" data-reveal><span class="skill__icon">❯</span><h4>Backend &amp; APIs</h4><p>Python, FastAPI, Pydantic, REST and CRUD APIs, Next.js, React, TypeScript</p></div>
+          <div class="skill tilt" data-reveal><span class="skill__icon">▤</span><h4>Databases</h4><p>SQL, PostgreSQL (Supabase), pgvector, schema design, row-level security</p></div>
+          <div class="skill tilt" data-reveal><span class="skill__icon">⟳</span><h4>DevOps</h4><p>Docker, GitHub Actions, CI/CD, Vercel, Git</p></div>
+          <div class="skill tilt" data-reveal><span class="skill__icon">✦</span><h4>AI / ML &amp; Core CS</h4><p>PyTorch, U-Net, XGBoost, Grad-CAM, SHAP · C++, Java, OOP, DSA, DBMS, OS</p></div>
+        </div>
+
+        <div class="extras">
+          <div class="extra" data-reveal>
+            <p class="section__label"><span>✓</span> Certifications</p>
+            <ul>
+              <li><b>The Joy of Computing using Python</b><span>NPTEL · 2025</span></li>
+              <li><b>Blockchain and its Applications</b><span>NPTEL · 2026</span></li>
+            </ul>
+          </div>
+          <div class="extra" data-reveal>
+            <p class="section__label"><span>↗</span> Activities</p>
+            <ul>
+              <li><b>InSpace Rocketry Competition 2026</b><span>Software engineer for the team, building the rocket's backend and telemetry system (in progress)</span></li>
+            </ul>
+          </div>
+          <div class="extra" data-reveal>
+            <p class="section__label"><span>◇</span> Education</p>
+            <ul>
+              <li><b>B.E. AI &amp; Machine Learning</b><span>Global Academy of Technology (VTU) · 2023 – 2027 · CGPA 8.91</span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="section contact" id="contact">
+      <div class="container">
+        <p class="section__label" data-reveal><span>05</span> Contact</p>
+        <h2 class="contact__title" data-split>Let's build <em class="serif">something</em>.</h2>
+        <a class="contact__mail magnetic" href="mailto:nvignesh88946@gmail.com" data-reveal>nvignesh88946@gmail.com <span>↗</span></a>
+        <div class="contact__links" data-reveal>
+          <a href="https://www.linkedin.com/in/vignesh-n3375302b3" target="_blank" rel="noopener">LinkedIn ↗</a>
+          <a href="https://github.com/VigneshN2005" target="_blank" rel="noopener">GitHub ↗</a>
+          <a href="Vignesh_N_Resume.pdf" target="_blank" rel="noopener">Resume ↗</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__in">
+      <span>© 2026 Vignesh N</span>
+      <span class="mono">Bengaluru · IST <span id="clock">--:--</span></span>
+      <a href="#top">Back to top ↑</a>
+    </div>
+  </footer>
+
+  <!-- lightbox -->
+  <div class="lightbox" id="lightbox" aria-hidden="true">
+    <button class="lightbox__close" aria-label="Close">×</button>
+    <img alt="">
+    <p></p>
+  </div>
+
+  <script src="globe.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>
